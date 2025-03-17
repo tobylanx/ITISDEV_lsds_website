@@ -16,18 +16,14 @@ document.addEventListener("DOMContentLoaded", async function () {
                 dropdownContent.classList.toggle("show");
             });
 
-            // **Logout Handling**
+            // **Logout Handling (No Alert, Direct Redirect)**
             document.getElementById("logoutBtn").addEventListener("click", async function () {
                 try {
-                    const response = await fetch("http://localhost:3001/logout", {
+                    await fetch("http://localhost:3001/logout", {
                         method: "POST",
                         credentials: "include"
                     });
-
-                    if (response.ok) {
-                        alert("✅ Logged out successfully!");
-                        window.location.href = "login.html";
-                    }
+                    window.location.href = "login.html"; // ✅ Directly redirects to login page
                 } catch (error) {
                     console.error("❌ Logout failed:", error);
                 }

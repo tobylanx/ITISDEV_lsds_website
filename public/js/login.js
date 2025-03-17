@@ -1,30 +1,38 @@
-document.querySelector('form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = document.querySelector('input[type="email"]').value.trim();
-    const password = document.querySelector('input[type="password"]').value.trim();
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
 
-    if (!email || !password) {
-        alert("❌ Please fill in all fields.");
+    if (!form) {
+        console.error("❌ Error: Login form not found!");
         return;
     }
 
-    try {
-        const response = await fetch('/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
-        });
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-        const data = await response.json();
+        const email = document.querySelector('input[type="email"]').value.trim();
+        const password = document.querySelector('input[type="password"]').value.trim();
 
-        if (response.ok) {
-            alert("✅ Login successful!");
-            window.location.href = "home.html";
-        } else {
-            alert(`❌ ${data.message}`);
+        if (!email || !password) {
+            alert("❌ Please fill in all fields.");
+            return;
         }
-    } catch (error) {
-        alert("❌ Server error. Please try again later.");
-        console.error("Login error:", error);
-    }
+
+        try {
+            const response = await fetch("http://localhost:3001/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                window.location.href = "home.html"; // ✅ Directly redirects to home
+            } else {
+                alert(`❌ ${data.message}`);
+            }
+        } catch (error) {
+            console.error("Login error:", error);
+        }
+    });
 });

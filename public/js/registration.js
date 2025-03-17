@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.querySelector("#password").value;
         const idNumber = document.querySelector("#idNumber").value.trim();
         const role = document.querySelector("#role").value;
-
-        const fullName = `${firstName} ${lastName}`; // ✅ Combine first and last name
+        const fullName = `${firstName} ${lastName}`;
 
         // **Validation Rules**
         const emailPattern = /^[a-zA-Z0-9._%+-]+@dlsu\.edu\.ph$/;
@@ -53,15 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const data = await response.json();
 
             if (response.ok) {
-                alert("✅ Registration successful!");
-                window.location.href = "home.html"; // ✅ Redirect to Home instead of Login
+                window.location.href = "login.html"; // ✅ Redirects to Login Page
             } else {
                 alert(`❌ ${data.message}`);
             }
         } catch (error) {
-            alert("❌ Server error. Please try again later.");
-            console.error("Registration error:", error);
+            console.error("❌ Registration error:", error);
         }
     });
 });
-
