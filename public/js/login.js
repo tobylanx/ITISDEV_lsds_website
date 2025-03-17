@@ -1,37 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
+document.querySelector('form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.querySelector('input[type="email"]').value.trim();
+    const password = document.querySelector('input[type="password"]').value.trim();
 
-    form.addEventListener("submit", async function (event) {
-        event.preventDefault();
+    if (!email || !password) {
+        alert("❌ Please fill in all fields.");
+        return;
+    }
 
-        const email = document.querySelector("input[placeholder='E-mail']").value.trim();
-        const password = document.querySelector("input[placeholder='Password']").value;
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
 
-        if (!email || !password) {
-            alert("❌ Please fill in all fields.");
-            return;
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("✅ Login successful!");
+            window.location.href = "home.html";
+        } else {
+            alert(`❌ ${data.message}`);
         }
-
-        try {
-            const response = await fetch("http://localhost:5000/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ email, password })
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                alert(`✅ Login successful! Welcome, ${data.user.name}`);
-                window.location.href = "home.html";
-            } else {
-                alert(`❌ ${data.message}`);
-            }
-        } catch (error) {
-            alert("❌ Server error. Please try again later.");
-            console.error("Login error:", error);
-        }
-    });
+    } catch (error) {
+        alert("❌ Server error. Please try again later.");
+        console.error("Login error:", error);
+    }
 });

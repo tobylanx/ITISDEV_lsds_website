@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -8,10 +9,11 @@ const User = require('./models/User');
 const Inquiry = require('./models/Inquiry');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 
+// Middleware
 app.use(cors({
-    origin: "http://localhost:8080",
+    origin: "http://localhost:3001",
     credentials: true
 }));
 app.use(bodyParser.json());
@@ -22,8 +24,14 @@ app.use(session({
     cookie: { secure: false }
 }));
 
-const mongoUri = 'mongodb+srv://admin2:lsdsUser2@lsds-web-cluster.mw2e9.mongodb.net/?retryWrites=true&w=majority';
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'home.html'));
+});
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+// MongoDB Connection
+const mongoUri = 'mongodb+srv://admin2:lsdsUser2@lsds-web-cluster.mw2e9.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose.connect(mongoUri, {
     useNewUrlParser: true,
@@ -32,6 +40,7 @@ mongoose.connect(mongoUri, {
 .then(() => console.log('✅ Connected to MongoDB'))
 .catch(err => console.error('❌ MongoDB connection error:', err.message));
 
+// **User Registration Route**
 app.post('/register', async (req, res) => {
     try {
         const { name, email, password, id_num, role } = req.body;
@@ -51,6 +60,7 @@ app.post('/register', async (req, res) => {
     }
 });
 
+// **User Login Route**
 app.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -72,6 +82,7 @@ app.post('/login', async (req, res) => {
     }
 });
 
+// **Session Check**
 app.get('/session', (req, res) => {
     if (req.session.user) {
         res.status(200).json({ user: req.session.user });
@@ -80,6 +91,7 @@ app.get('/session', (req, res) => {
     }
 });
 
+// **Logout Route**
 app.post('/logout', (req, res) => {
     req.session.destroy(err => {
         if (err) return res.status(500).json({ message: '❌ Error logging out' });
@@ -87,6 +99,7 @@ app.post('/logout', (req, res) => {
     });
 });
 
+// **Contact Form Submission**
 app.post('/contact', async (req, res) => {
     try {
         const { name, email, message } = req.body;
