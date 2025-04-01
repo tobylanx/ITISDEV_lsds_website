@@ -181,7 +181,7 @@ button:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 10px;
-    z-index: 9999;
+    z-index: 1000;
 }
 
 .dropdown-content p {
