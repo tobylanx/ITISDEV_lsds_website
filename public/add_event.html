@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event - LSDS</title>
+    <link rel="stylesheet" href="css/styles4.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-left">
+            <a href="home.html">
+                <img src="images/logo.png" alt="LSDS Logo">
+                <span>LA SALLE <br> DEBATE SOCIETY</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="members.html">MEMBER'S DIRECTORY</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="contact_us.html">CONTACT US</a></li>
+        </ul>
+        <div id="user-menu">
+            <a href="login.html" class="sign-in-btn" id="signInBtn">Sign In</a>
+            <div id="userDropdown" class="dropdown" style="display: none;">
+                <button id="userIcon">👤</button>
+                <div class="dropdown-content">
+                    <p id="userName"></p>
+                    <p id="userRole"></p>
+                    <button id="logoutBtn">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add Event Form -->
+    <section class="add-event">
+        <button id="backBtn" onclick="location.href='event_management.html'">← Back</button>
+        <h1>Add Event</h1>
+        <form id="addEventForm" enctype="multipart/form-data">
+            <label for="eventTitle">Event Title:</label>
+            <input type="text" id="eventTitle" name="title" required>
+
+            <label for="eventImage">Event Image:</label>
+            <input type="file" id="eventImage" name="eventImage" accept="image/*" required>
+
+            <label for="eventDescription">Description:</label>
+            <textarea id="eventDescription" name="description" required></textarea>
+
+            <label for="eventDateTime">Date & Time:</label>
+            <input type="datetime-local" id="eventDateTime" name="dateTime" required>
+
+            <label for="eventLocation">Location:</label>
+            <input type="text" id="eventLocation" name="location" required>
+
+            <label for="eventStatus">Status:</label>
+            <select id="eventStatus" name="status">
+                <option value="upcoming">Upcoming</option>
+                <option value="past">Past</option>
+            </select>
+
+            <button type="submit">Create Event</button>
+        </form>
+    </section>
+
+    <script src="js/add_event.js"></script>
+</body>
+</html>

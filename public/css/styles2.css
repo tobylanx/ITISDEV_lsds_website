@@ -206,3 +206,259 @@ button:hover {
 .show {
     display: block;
 }
+
+/*added marsha*/
+
+/* Public Showcase Section */
+.public-showcase {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #77a290, #8ebdaa);
+    color: #fff;
+}
+
+.showcase-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.showcase-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.showcase-box {
+    background: rgba(255, 255, 255, 0.9);
+    color: #356859;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.showcase-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.showcase-box p, .showcase-box ul {
+    font-size: 16px;
+    text-align: left;
+}
+
+.showcase-box ul {
+    padding-left: 20px;
+}
+
+.showcase-box li {
+    margin-bottom: 5px;
+}
+
+/* Achievements Section */
+.achievements {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa;
+}
+
+.achievements-header {
+    font-size: 28px;
+    font-weight: bold;
+    color: #356859;
+    margin-bottom: 20px;
+}
+
+.achievements-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.achievement-item {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.achievement-item img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.achievement-item:hover {
+    transform: scale(1.1);
+}
+
+/* Events Section */
+.events {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #77a290, #8ebdaa);
+    color: white;
+}
+
+.events-header {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.event-box {
+    background: rgba(255, 255, 255, 0.9);
+    color: #356859;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.event-box h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.event-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.event-box a {
+    color: #356859;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.event-box a:hover {
+    text-decoration: underline;
+}
+
+/* Event Images */
+.event-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.event-images img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Event Photos Section */
+.event-photos {
+    text-align: center;
+    padding: 50px 20px;
+    /*background: #f8f9fa*/
+    background: linear-gradient(to bottom, #77a290, #8ebdaa);
+    color: #fff;;
+}
+
+.event-photos-header {
+    font-size: 28px;
+    font-weight: bold;
+    /*color: #356859;*/
+    margin-bottom: 20px;
+}
+
+.event-photos-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.event-photo-item {
+    background: #356859;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-photo-item img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-photo-item:hover {
+    transform: scale(1.05);
+}
+
+/* Member's Directory Section */
+.members-directory {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa;
+}
+
+.members-header {
+    font-size: 36px;
+    font-weight: bold;
+    color: #356859;
+    margin-bottom: 30px;
+}
+
+.members-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.member h2 {
+    font-size: 20px;
+    color: #356859;
+    font-weight: bold;
+}
+
+.member p {
+    font-size: 14px;
+    color: #56786E;
+}
+
+

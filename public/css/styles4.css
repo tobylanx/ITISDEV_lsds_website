@@ -1,0 +1,350 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #77a290;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+}
+
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-left img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-left span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #356859;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #356859;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    border-bottom: 2px solid #356859;
+}
+
+.sign-in-btn {
+    padding: 10px 20px;
+    background: #F8E16C;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #356859;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sign-in-btn:hover {
+    background: #E4C75A;
+}
+
+/* Event Management Styles */
+.event-management h1 {
+    text-align: center;
+    color: #1f4336;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Back & Add Event Buttons */
+#backBtn, #addEventBtn {
+    position: absolute;
+    top: 15px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#backBtn {
+    left: 15px;
+    background: #1f4336;
+    color: white;
+}
+
+#backBtn:hover {
+    background: #336a56;
+}
+
+#addEventBtn {
+    right: 15px;
+    background: #f6e06c;
+    color: #336a56;
+}
+
+#addEventBtn:hover {
+    background: #fae138;
+}
+
+/* Centered Search & Filter with Spacious Layout */
+.event-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.event-controls input,
+.event-controls select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 40%;
+}
+
+/* Event List */
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.event-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer; /* Makes it clear the card is clickable */
+}
+
+.event-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9; /* Light gray background on hover */
+}
+
+.event-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.event-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.event-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.event-card button {
+    background: #ff5757;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.event-card button:hover {
+    background: #d94646;
+}
+
+/* Add/Update Event Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-event h1 {
+    text-align: center;
+    color: #1f4336;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.update-event h1 {
+    text-align: center;
+    color: #1f4336;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    background: #fae138;
+    color: #336a56;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #c6b013;
+}
+
+/* Dropdown Styling */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+}
+
+/* Style the dropdown when hovered or focused */
+select:hover, select:focus {
+    border-color: #008cba;
+    outline: none;
+}
+
+/* View Event Styles */
+.event-details h1 {
+    text-align: center;
+    color: #1f4336;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#eventImage {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#eventDescription {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.event-details p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.event-details strong {
+    color: #333;
+}
+
+.event-details p:last-of-type {
+    font-weight: bold;
+}
+
+.delete-btn {
+    background: #ff5757;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.delete-btn:hover {
+    background: #d94646;
+}
+
+/* Delete Event Confirmation */
+.delete-event {
+    text-align: center;
+}
+
+.delete-event h1 {
+    padding: 20px 20px;
+}
+
+.confirm-btn {
+    background: red;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: white;
+}
+
+.confirm-btn:hover {
+    background: darkred;
+}
+
+.cancel-btn {
+    background: #1f4336;
+    padding: 10px 20px;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #336a56;
+}
+
+

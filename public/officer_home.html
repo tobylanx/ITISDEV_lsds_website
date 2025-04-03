@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officer Dashboard - LSDS</title>
+    <link rel="stylesheet" href="css/styles3.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-left">
+            <a href="home.html">
+                <img src="images/logo.png" alt="LSDS Logo">
+                <span>LA SALLE <br> DEBATE SOCIETY</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="members.html">MEMBER'S DIRECTORY</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="contact_us.html">CONTACT US</a></li>
+        </ul>
+        <div id="user-menu">
+            <a href="login.html" class="sign-in-btn" id="signInBtn">Sign In</a>
+            <div id="userDropdown" class="dropdown" style="display: none;">
+                <button id="userIcon">👤</button>
+                <div class="dropdown-content">
+                    <p id="userName"></p>
+                    <p id="userRole"></p>
+                    <button id="logoutBtn">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Officer Dashboard Main Section -->
+    <section class="dashboard-container">
+        <h1 class="dashboard-header">LSDS Officer Dashboard</h1>
+        <div class="dashboard-options">
+            <a href="event_management.html" class="dashboard-box">
+                <h2>Event Management</h2>
+                <p>Create, update, and manage LSDS events.</p>
+            </a>
+            <a href="announcementAdmin.html" class="dashboard-box">
+                <h2>Add Announcements</h2>
+                <p>Post important updates for members.</p>
+            </a>
+            <a href="documentRepo.html" class="dashboard-box">
+                <h2>Add Files</h2>
+                <p>Download and view important files.</p>
+            </a>
+        </div>
+    </section>
+
+    <script src="js/session.js"></script>
+</body>
+</html>
