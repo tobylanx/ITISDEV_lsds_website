@@ -1,0 +1,292 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-left img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-left span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #356859;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #356859;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    border-bottom: 2px solid #356859;
+}
+
+.sign-in-btn {
+    padding: 10px 20px;
+    background: #F8E16C;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #356859;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sign-in-btn:hover {
+    background: #E4C75A;
+}
+
+/* Contact Us Section */
+.contact-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-section h1 {
+    font-size: 36px;
+    color: #356859;
+    font-weight: bold;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: #56786E;
+    margin-top: 5px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: linear-gradient(to bottom, #77a290, #8ebdaa);
+    padding: 30px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 30px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+}
+
+.input-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-box textarea {
+    width: 100%; /* Ensures it spans the full width of the form */
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: block; /* Ensures it takes up its space */
+    margin: 0 auto; /* Centers it horizontally */
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Send Message Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #F8E16C;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Main content */
+/* Styles for the popup form */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-form h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.popup-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.popup-form input,
+.popup-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.popup-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-form button.cancel {
+    background-color: #ccc;
+}
+
+
+/* Style for the "New Announcement" button */
+.new-ann {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Announcement Card Styles */
+.ann-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #007bff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.ann-card:hover {
+    transform: scale(1.02);
+}
+
+.ann-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.ann-category {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 8px;
+}
+
+.ann-poster {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.ann-date {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.ann-body {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Container for announcements */
+.previous.announcements {
+    max-width: 600px;
+    margin: 20px auto;
+}

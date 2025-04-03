@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Repository - LSDS</title>
+    <link rel="stylesheet" href="css/announcementAdmin.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/announcementAdmin.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">
+                <img src="images/logo.png" alt="LSDS Logo">
+                <span>LA SALLE <br> DEBATE SOCIETY</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html" class="active">HOME</a></li>
+            <li><a href="#">MEMBER'S DIRECTORY</a></li>
+            <li><a href="#">EVENTS</a></li>
+            <li><a href="contact_us.html"">CONTACT US</a></li>
+        </ul>
+        <a href="login.html" class="sign-in-btn">Sign In</a>
+    </nav>
+
+    <section class="main-content">
+        <div class="top-section">
+            <button class="new-ann">New Announcement</button>
+        </div>
+
+        <!-- New Announcement Popup -->
+        <div class="popup-overlay"></div>
+
+        <div class="popup-form">
+            <h2>Create New Announcement</h2>
+            
+            <label for="ann-title">Title:</label>
+            <input type="text" id="ann-title" placeholder="Enter title">
+
+            <label for="ann-category">Category:</label>
+            <input type="text" id="ann-category" placeholder="Enter category">
+
+            <label for="ann-poster">Poster Name:</label>
+            <input type="text" id="ann-poster" placeholder="Your name">
+
+            <label for="ann-body">Body:</label>
+            <textarea id="ann-body" placeholder="Enter announcement details"></textarea>
+
+            <div class="popup-buttons">
+                <button id="save-ann">Save</button>
+                <button class="cancel">Cancel</button>
+            </div>
+        </div>
+
+
+
+        <div class="previous announcements">
+            <div class="ann-card">
+                <div class="ann-title">TRYOUTS SHEETS POSTED</div>
+                <div class="ann-category">Training</div>
+                <div class="ann-poster">Alyssa Lorine David</div>
+                <div class="ann-date">March 1, 2025</div>
+                <div class="ann-body">body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
