@@ -3,27 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Repository - LSDS</title>
+    <title>Announcements</title>
     <link rel="stylesheet" href="css/announcementAdmin.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/announcementAdmin.js"></script>
+    <script src="js/session.js"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
         <div class="nav-left">
-            <a href="index.html">
+            <a href="home.html">
                 <img src="images/logo.png" alt="LSDS Logo">
                 <span>LA SALLE <br> DEBATE SOCIETY</span>
             </a>
         </div>
         <ul class="nav-links">
-            <li><a href="home.html" class="active">HOME</a></li>
-            <li><a href="#">MEMBER'S DIRECTORY</a></li>
-            <li><a href="#">EVENTS</a></li>
-            <li><a href="contact_us.html"">CONTACT US</a></li>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="members.html">MEMBER'S DIRECTORY</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="contact_us.html">CONTACT US</a></li>
         </ul>
-        <a href="login.html" class="sign-in-btn">Sign In</a>
+        <div id="user-menu">
+            <a href="login.html" class="sign-in-btn" id="signInBtn">Sign In</a>
+            <div id="userDropdown" class="dropdown" style="display: none;">
+                <button id="userIcon">👤</button>
+                <div class="dropdown-content">
+                    <p id="userName"></p>
+                    <p id="userRole"></p>
+                    <button id="logoutBtn">Log Out</button>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <section class="main-content">
